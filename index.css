@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+body{
+  background: linear-gradient(0deg,#1030e6 20% ,#97a7ff 45%, #1030e6 112%) fixed;
+  background-size: 152% 207%;
+
+  animation: BgAnimation 10s linear infinite;
+}
+
+@keyframes BgAnimation {
+  0%{background-position:50% 0%}
+  50%{background-position:50% 100%}
+  100%{background-position:50% 0%}
+}

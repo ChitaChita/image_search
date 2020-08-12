@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>画像検索</title>
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
     <h1>海洋生物画像検索</h1>
