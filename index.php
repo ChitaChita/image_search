@@ -6,9 +6,13 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <h1>海洋生物画像検索</h1>
-    <form>
-      <input type="text" name="search" value="" placeholder="生物の名前または種類">
-      <input type="submit" name="submit" value="検索">
-    </form>
+    <div id="logo">
+      <h1>海洋生物画像検索</h1>
+    </div>
+    <div id="fakebox">
+      <form>
+        <input class="search-box" type="text" name="search" value="" placeholder="生物の名前または種類">
+        <input class="search-button" type="submit" name="submit" value="検索">
+      </form>
+    </div>
   </body>
