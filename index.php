@@ -12,7 +12,9 @@
     <div id="fakebox">
       <form>
         <input class="search-box" type="text" name="search" value="" placeholder="生物の名前または種類">
-        <input class="search-button" type="submit" name="submit" value="検索">
+        <div class="fake-area">
+          <input class="search-button" type="submit" name="submit" value="検索">
+        </div>
       </form>
     </div>
   </body>

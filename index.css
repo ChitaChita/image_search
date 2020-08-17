@@ -2,7 +2,16 @@
 
 #fakebox{
   margin: 0 auto;
-  max-width: 584px;
+  max-width: 700px;
+}
+
+.fake-area{
+	background: linear-gradient(100deg,#ebebeb,#707070);
+    border-radius: 25px;
+    padding: 4px;
+    width: 110px;
+    height: 45px;
+    float: right;
 }
 
 .search-box{
@@ -25,37 +34,40 @@
 }
 
 .search-button{
+  border: 0;
   font-size: 26px;
-  font: bold;
   width: 110px;
-  height: 53px;
+  height: 45px;
+  text-align: center;
   border-radius: 25px;
-  border-left:4px solid#ebebeb;
-  border-top:4px solid#ebebeb;
-  border-right:4px solid #707070;
-  border-bottom:4px solid #707070;
   cursor: pointer;
   background: linear-gradient(to bottom,#ff6600, #ff0066);
   color: #fff;
   position: absolute;
-  margin-left: 12px;
+  float: left;
 }
 
 div{
   display: block;
 }
 body{
-  background: #97a7ff;
   background: repeating-linear-gradient(0deg,#1030e6 20% ,#97a7ff 45%, #1030e6 112%) fixed;
   background-size: 152% 207%;
-
+  -webkit-animation: BgAnimation 10s linear infinite;
+  -moz-animation: BgAnimation 10s linear infinite;
   animation: BgAnimation 10s linear infinite;
 }
-
+@-webkit-keyframes BgAnimation {
+  0%{background-position:50% 0%}
+  100%{background-position:200% 200%}
+}
+@-moz-keyframes BgAnimation {
+  0%{background-position:50% 0%}
+  100%{background-position:200% 200%}
+}
 @keyframes BgAnimation {
   0%{background-position:50% 0%}
-  50%{background-position:50% 100%}
-  100%{background-position:50% 0%}
+  100%{background-position:200% 200%}
 }
 
 h1{
