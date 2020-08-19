@@ -4,12 +4,14 @@
     <meta charset="utf-8" />
     <title>画像検索</title>
     <link rel="stylesheet" href="./index.css" />
+    <script src="./jquery.js"></script>
+    <script src="./index.js"></script>
   </head>
   <body>
     <div id="logo">
       <h1>海洋生物画像検索</h1>
     </div>
-    <div id="fakebox">
+    <div id="fake-box">
       <form>
         <input class="search-box" type="text" name="search" value="" placeholder="生物の名前または種類">
         <div class="fake-area">
@@ -17,7 +19,7 @@
         </div>
       </form>
     </div>
-    <div id="image-list">
+    <ul id="image-list">
 <?php
 // $keywords
 // $imgList
@@ -32,9 +34,10 @@ if (is_dir($dir_path)) {
     while (false !== ($file_name = $ch_dir -> read())) {
       $ln_path = $ch_dir -> path . "/" .$file_name;
         if (@getimagesize($ln_path)) { 
-          //画像かどうか？
-          echo "<a href = \"imgview.php?d=" .urlencode(mb_convert_encoding($ln_path, "UTF-8")). "\" target = \"_blank\" >";
-          echo "<img src = \"" .$ln_path. "\" width=\"100\"></a> ";
+          echo "<li class = \"".borderbox."\">";
+          echo "<a href = \"imgview.php?d=" .urlencode(mb_convert_encoding($ln_path, "UTF-8")). "\" target = \"_blank\" class= \"" .modal. "\" >";
+          echo "<img src = \"" .$ln_path. "\" width=\"250\" height=\"180\" ></a> ";
+          echo "</li>";
         }
       }
       $ch_dir -> close();
@@ -48,5 +51,6 @@ if (is_dir($dir_path)) {
     echo 'DIR 画像がないよ';
 }
 ?>
-    </div>
+    </ul>
+    <div id="graydisplay"></div>
   </body>
