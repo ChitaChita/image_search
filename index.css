@@ -107,9 +107,11 @@
   float: left;
 }
 
-.indention{
+/* .indention{
   clear: both;
-}
+} */
+
+
 
 body{
   background: repeating-linear-gradient(0deg,#1030e6 20% ,#97a7ff 45%, #1030e6 112%) fixed;
@@ -118,7 +120,7 @@ body{
   -moz-animation: BgAnimation 10s linear infinite;
   animation: BgAnimation 10s linear infinite;
 }
-/* @-webkit-keyframes BgAnimation {
+@-webkit-keyframes BgAnimation {
   0%{background-position:50% 0%}
   100%{background-position:200% 200%}
 }
@@ -129,7 +131,7 @@ body{
 @keyframes BgAnimation {
   0%{background-position:50% 0%}
   100%{background-position:200% 200%}
-} */
+}
 
 h1{
   text-align: center;
@@ -137,5 +139,10 @@ h1{
   padding-bottom: 100px;
   position: relative;
   font-size: 90px;
+  color: #fff;
+}
+h2{
+  text-align: center;
+  font-size: 50px;
   color: #fff;
 }
