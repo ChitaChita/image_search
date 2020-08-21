@@ -36,6 +36,7 @@
 error_reporting(E_ALL);
 // $keywords
 // $imgList
+$img_cnt = 0;
 $search = '';
 $search = htmlspecialchars($_GET[search]);
 require('./data/tag.php');
@@ -49,6 +50,7 @@ if (is_dir($dir_path)) {
           echo "<a href = " .urlencode(mb_convert_encoding($imgList[$i][0], "UTF-8")). "\" target = \"_blank\" class= \"" .modal. "\" >";
           echo "<img src = \"" .$imgList[$i][0]. "\" width=\"250\" height=\"180\" ></a> ";
           echo "</li>";
+          $img_cnt++;
         }
       }
     }
@@ -57,6 +59,9 @@ if (is_dir($dir_path)) {
     }
 } else {
   echo "<p>画像が保存されてません</p>";
+}
+if($img_cnt == 0 && !empty($_GET[search])){
+  echo "<h2>該当する画像が見つかりませんでした</h2>";
 }
 ?>
     </ul>
